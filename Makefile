@@ -8,17 +8,22 @@ R_OPTS = --slave --vanilla
 SLIDES = index
 CSS = custom.css
 
-# Directories
-SUBDIR = input
-
 # Source files
-RMD_INPUT := $(wildcard $(SUBDIR)/*.Rmd)
-IMGS := $(wildcard img/*)
+RMD_INPUT := $(wildcard input/*.Rmd)
+IMG_INPUT := $(wildcard img/*)
+JS_INPUT := $(wildcard js/*.js)
+JS_HTML = js/js-figs.html
 
 # Rules -----------------------------------------------------------------------
 
 # Slides
 slides: $(SLIDES).html
 
-$(SLIDES).html: $(SLIDES).Rmd $(RMD_INPUT) $(CSS) $(IMGS)
+$(SLIDES).html: $(SLIDES).Rmd $(RMD_INPUT) $(IMG_INPUT) $(CSS) $(JS_HTML)
 	Rscript $(R_OPTS) -e "rmarkdown::render('$<', 'xaringan::moon_reader')"
+
+$(JS_HTML): $(JS_INPUT)
+	> $@
+	for script in $^; do \
+		echo "<script src=\"$$script\"></script>" >> $@; \
+	done

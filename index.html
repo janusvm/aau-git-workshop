@@ -7,6 +7,7 @@
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
     <link rel="stylesheet" href="custom.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitgraph.js/1.13.0/gitgraph.min.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -104,8 +105,13 @@ sudo apt-get install git
 name: github
 
 # GitHub
+
+---
+
+<canvas id="my-gitgraph"></canvas
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gitgraph.js/1.13.0/gitgraph.js"></script>
 <script>var slideshow = remark.create({
 "highlightStyle": "monokai-sublime",
 "highlightLines": true,
@@ -120,6 +126,7 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
   d.head.appendChild(s);
 })();</script>
+<script src="js/my-gitgraph.js"></script>
 
 <script>
 (function() {

@@ -4,16 +4,20 @@ author: "Janus Valberg-Madsen"
 date: "2018-10-22 @ Aalborg University"
 output:
   xaringan::moon_reader:
-    css: [default, default-fonts, custom.css]
+    css: [default, default-fonts, custom.css, "https://cdnjs.cloudflare.com/ajax/libs/gitgraph.js/1.13.0/gitgraph.min.css"]
     lib_dir: libs
     nature:
+      beforeInit: ["https://cdnjs.cloudflare.com/ajax/libs/gitgraph.js/1.13.0/gitgraph.js"]
       highlightStyle: monokai-sublime
       highlightLines: true
       countIncrementalSlides: false
+    includes:
+      after_body: js/js-figs.html
 ---
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+source("R/utils.R")
 ```
 
 ```{r intro, child = "input/intro.Rmd"}
@@ -28,3 +32,7 @@ options(htmltools.dir.version = FALSE)
 
 ```{r install, child = "input/install.Rmd"}
 ```
+
+---
+
+`r jsfig("my-gitgraph")`
