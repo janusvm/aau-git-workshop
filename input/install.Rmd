@@ -1,0 +1,44 @@
+name: installation
+
+.pull-left[
+# Installing Git
+
+### Windows and macOS
+
+Download from <https://git-scm.com/>
+
+Windows users may have to restart after installation to update the system PATH
+
+### Linux
+
+Install via package manager, e.g.
+
+```sh
+sudo apt-get install git
+```
+]
+
+.pull-right[
+# Installing a client
+
+[Many options](https://git-scm.com/downloads/guis/), so here's a couple:
+
+- [GitHub Desktop](https://desktop.github.com/)
+
+> very simple client, only most basic features
+
+- [GitKraken](https://www.gitkraken.com/)
+
+> more features, fancy UI; free for _non-commercial_ use
+
+- Your editor of choice
+
+> many editors (Emacs, Atom, etc.) support version control from inside the editor
+
+- The command line `r emo::ji('wink')`
+]
+
+---
+name: github
+
+# GitHub

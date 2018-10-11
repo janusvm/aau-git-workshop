@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Git Workshop</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Janus Valberg-Madsen" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Git Workshop
+### Janus Valberg-Madsen
+### 2018-10-22 @ Aalborg University
+
+---
+
+
+
+
+
+# Overview of today
+
+--
+
+1. What is version control, and why should I care?
+
+--
+
+2. Overview of the most essential Git commands (with demos)
+
+--
+
+3. **(interactive)** Install Git and a client
+
+--
+
+4. **(interactive)** Set up a repository on GitHub for your P1 project
+
+--
+
+5. Exercises
+
+---
+
+
+name: concepts
+class: center, middle, inverse
+
+# Git concepts
+
+---
+class: center, middle
+
+![Source: Atlassian](https://wac-cdn.atlassian.com/dam/jcr:0c5257d5-ff01-4014-af12-faf2aec53cc3/01.svg)
+
+---
+
+
+name: installation
+
+.pull-left[
+# Installing Git
+
+### Windows and macOS
+
+Download from &lt;https://git-scm.com/&gt;
+
+Windows users may have to restart after installation to update the system PATH
+
+### Linux
+
+Install via package manager, e.g.
+
+```sh
+sudo apt-get install git
+```
+]
+
+.pull-right[
+# Installing a client
+
+[Many options](https://git-scm.com/downloads/guis/), so here's a couple:
+
+- [GitHub Desktop](https://desktop.github.com/)
+
+&gt; very simple client, only most basic features
+
+- [GitKraken](https://www.gitkraken.com/)
+
+&gt; more features, fancy UI; free for _non-commercial_ use
+
+- Your editor of choice
+
+&gt; many editors (Emacs, Atom, etc.) support version control from inside the editor
+
+- The command line 😉
+]
+
+---
+name: github
+
+# GitHub
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "monokai-sublime",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

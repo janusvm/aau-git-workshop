@@ -1,0 +1,21 @@
+# Overview of today
+
+--
+
+1. What is version control, and why should I care?
+
+--
+
+2. Overview of the most essential Git commands (with demos)
+
+--
+
+3. **(interactive)** Install Git and a client
+
+--
+
+4. **(interactive)** Set up a repository on GitHub for your P1 project
+
+--
+
+5. Exercises
