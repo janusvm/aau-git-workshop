@@ -16,7 +16,7 @@ output:
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(
   echo = FALSE,
-  out.width = "100%",
+  out.width = "85%",
   fig.align = "center"
 )
 ```

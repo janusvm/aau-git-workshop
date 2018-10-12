@@ -7,7 +7,7 @@ class: center, middle, inverse
 
 ## The main components of a Git repository
 
-```{r repo-comp, out.width="85%"}
+```{r repo-comp}
 knitr::include_graphics("figs/repo-comp.svg")
 ```
 
@@ -15,7 +15,7 @@ knitr::include_graphics("figs/repo-comp.svg")
 
 ## Add: stage changes for committing
 
-```{r git-add, out.width="85%"}
+```{r git-add}
 knitr::include_graphics("figs/git-add.svg")
 ```
 
@@ -23,7 +23,7 @@ knitr::include_graphics("figs/git-add.svg")
 
 ## Commit: append staged changes to history
 
-```{r git-commit, out.width="85%"}
+```{r git-commit}
 knitr::include_graphics("figs/git-commit.svg")
 ```
 
@@ -31,7 +31,7 @@ knitr::include_graphics("figs/git-commit.svg")
 
 ## Push: changes on local repo ⭢ remote repo
 
-```{r git-push, out.width="85%"}
+```{r git-push}
 knitr::include_graphics("figs/git-push.svg")
 ```
 
@@ -39,7 +39,7 @@ knitr::include_graphics("figs/git-push.svg")
 
 ## Push: changes on local repo ⭢ remote repo (before)
 
-```{r git-push-before, out.width="85%"}
+```{r git-push-before}
 knitr::include_graphics("figs/git-push-before.svg")
 ```
 
@@ -47,7 +47,7 @@ knitr::include_graphics("figs/git-push-before.svg")
 
 ## Push: changes on local repo ⭢ remote repo (after)
 
-```{r git-push-after, out.width="85%"}
+```{r git-push-after}
 knitr::include_graphics("figs/git-push-after.svg")
 ```
 
@@ -56,7 +56,7 @@ knitr::include_graphics("figs/git-push-after.svg")
 
 ## Pull: changes on remote repo ⭢ local repo (before)
 
-```{r git-pull-before, out.width="85%"}
+```{r git-pull-before}
 knitr::include_graphics("figs/git-pull-before.svg")
 ```
 
@@ -64,6 +64,6 @@ knitr::include_graphics("figs/git-pull-before.svg")
 
 ## Pull: changes on remote repo ⭢ local repo (after)
 
-```{r git-pull-after, out.width="85%"}
+```{r git-pull-after}
 knitr::include_graphics("figs/git-pull-after.svg")
 ```
