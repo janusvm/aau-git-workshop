@@ -1,0 +1,3 @@
+[submodule "figs/gitdags"]
+	path = figs/gitdags
+	url = https://github.com/jubobs/gitdags.git
