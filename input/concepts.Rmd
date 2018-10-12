@@ -4,13 +4,66 @@ class: center, middle, inverse
 # Git concepts
 
 ---
-class: center, middle
 
-![Source: Atlassian](https://wac-cdn.atlassian.com/dam/jcr:0c5257d5-ff01-4014-af12-faf2aec53cc3/01.svg)
+## The main components of a Git repository
+
+```{r repo-comp, out.width="85%"}
+knitr::include_graphics("figs/repo-comp.svg")
+```
 
 ---
-class: center, middle
 
-```{r test-fig}
-knitr::include_graphics("figs/test.svg")
+## Add: stage changes for committing
+
+```{r git-add, out.width="85%"}
+knitr::include_graphics("figs/git-add.svg")
+```
+
+---
+
+## Commit: append staged changes to history
+
+```{r git-commit, out.width="85%"}
+knitr::include_graphics("figs/git-commit.svg")
+```
+
+---
+
+## Push: changes on local repo ⭢ remote repo
+
+```{r git-push, out.width="85%"}
+knitr::include_graphics("figs/git-push.svg")
+```
+
+---
+
+## Push: changes on local repo ⭢ remote repo (before)
+
+```{r git-push-before, out.width="85%"}
+knitr::include_graphics("figs/git-push-before.svg")
+```
+
+---
+
+## Push: changes on local repo ⭢ remote repo (after)
+
+```{r git-push-after, out.width="85%"}
+knitr::include_graphics("figs/git-push-after.svg")
+```
+
+
+---
+
+## Pull: changes on remote repo ⭢ local repo (before)
+
+```{r git-pull-before, out.width="85%"}
+knitr::include_graphics("figs/git-pull-before.svg")
+```
+
+---
+
+## Pull: changes on remote repo ⭢ local repo (after)
+
+```{r git-pull-after, out.width="85%"}
+knitr::include_graphics("figs/git-pull-after.svg")
 ```

@@ -1,0 +1,53 @@
+\documentclass[tikz]{standalone}
+\usepackage{gitdags/gitdags}
+\usepackage{inconsolata}
+\usepackage{graphicx}
+\usetikzlibrary{calc,backgrounds,positioning}
+
+\tikzstyle{repolabel} = [text width=2.5em,text=solarized-base1,font=\tiny\ttfamily,align=center]
+
+\begin{document}
+
+  \begin{tikzpicture}
+
+    % Commit history, local
+    \begin{scope}[
+      scale=0.6,
+      every node/.append style={transform shape},
+      local bounding box=scope1
+      ]
+      \gitDAG[grow down sep=2em]{
+      C1 -- C2 -- C3
+      };
+
+      \begin{scope}[on background layer]
+        \fill[rounded corners,solarized-base3] ($(C1)+(-1,0.75)$) rectangle ($(C3)+(1,-0.75)$);
+      \end{scope}
+    \end{scope}
+
+    % Commit history, remote
+    \begin{scope}[
+      scale=0.6,
+      every node/.append style={transform shape},
+      local bounding box=scope2,
+      shift={(6.81,0)}
+      ]
+      \gitDAG[grow down sep=2em]{
+        C1' [as=C1] -- C2' [as=C2] -- [opacity=0.5] C3' [as=C3,densely dotted,thin]
+      };
+
+      \begin{scope}[on background layer]
+        \fill[rounded corners,solarized-base3] ($(C1')+(-1,0.75)$) rectangle ($(C3')+(1,-0.75)$);
+      \end{scope}
+    \end{scope}
+
+    \node [below=1em of C3,anchor=north] (laptop) {\includegraphics[width=2.5em]{fa-laptop}};
+    \node [below=1em of C3',anchor=north] (server) {\includegraphics[width=2em]{fa-server}};
+    \node [below=1pt of laptop,repolabel] {Commit History (local)};
+    \node [below=1pt of server,repolabel] {Commit History (remote)};
+
+    \draw[resetarrows,shorten <= 5pt, shorten >= 2pt] (laptop.east) to (server.west) ;
+
+  \end{tikzpicture}
+
+\end{document}
