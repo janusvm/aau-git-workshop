@@ -13,7 +13,7 @@
 class: center, middle, inverse, title-slide
 
 # Git Workshop
-### Janus Valberg-Madsen
+### <a href='https://github.com/janusvm'>Janus Valberg-Madsen</a>
 ### 2018-10-22 @ Aalborg University
 
 ---
@@ -53,14 +53,53 @@ class: center, middle, inverse
 # Git concepts
 
 ---
-class: center, middle
 
-![Source: Atlassian](https://wac-cdn.atlassian.com/dam/jcr:0c5257d5-ff01-4014-af12-faf2aec53cc3/01.svg)
+## The main components of a Git repository
+
+&lt;img src="figs/repo-comp.svg" width="85%" style="display: block; margin: auto;" /&gt;
 
 ---
-class: center, middle
 
-&lt;img src="figs/test.svg" width="100%" /&gt;
+## Add: stage changes for committing
+
+&lt;img src="figs/git-add.svg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Commit: append staged changes to history
+
+&lt;img src="figs/git-commit.svg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Push: changes on local repo ⭢ remote repo
+
+&lt;img src="figs/git-push.svg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Push: changes on local repo ⭢ remote repo (before)
+
+&lt;img src="figs/git-push-before.svg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Push: changes on local repo ⭢ remote repo (after)
+
+&lt;img src="figs/git-push-after.svg" width="85%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+## Pull: changes on remote repo ⭢ local repo (before)
+
+&lt;img src="figs/git-pull-before.svg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Pull: changes on remote repo ⭢ local repo (after)
+
+&lt;img src="figs/git-pull-after.svg" width="85%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -81,28 +120,28 @@ Windows users may have to restart after installation to update the system PATH
 Install via package manager, e.g.
 
 ```sh
-sudo apt-get install git
+sudo apt install git
 ```
 ]
 
 .pull-right[
 # Installing a client
 
-[Many options](https://git-scm.com/downloads/guis/), so here's a couple:
+[Many options](https://git-scm.com/downloads/guis/), but to highlight a few:
 
-- [GitHub Desktop](https://desktop.github.com/)
+♟ [**GitHub Desktop**](https://desktop.github.com/)
 
-&gt; very simple client, only most basic features
+⤷ very simple client, only most basic features
 
-- [GitKraken](https://www.gitkraken.com/)
+♜ [**GitKraken**](https://www.gitkraken.com/)
 
-&gt; more features, fancy UI; free for _non-commercial_ use
+⤷ more features, fancy UI; free for _non-commercial_ use, requires account
 
-- Your editor of choice
+♞ **Your editor of choice**
 
-&gt; many editors (Emacs, Atom, etc.) support version control from inside the editor
+⤷ many editors support version control from inside the editor
 
-- The command line 😉
+♛ **The command line** 😏
 ]
 
 ---
