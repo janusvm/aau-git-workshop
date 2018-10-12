@@ -1,0 +1,23 @@
+\documentclass[tikz]{standalone}
+\usepackage{gitdags/gitdags}
+
+\begin{document}
+  \begin{tikzpicture}
+    \gitDAG [grow right sep=2em] {
+      C1 -- C2 -- C3
+    };
+
+    \node [right=2em of C3] {};
+
+    \gitremotebranch
+      {origin/master}
+      {below=of C3}
+      {C3}
+
+    \gitbranch
+      {master}
+      {above=of C3}
+      {C3}
+
+  \end{tikzpicture}
+\end{document}

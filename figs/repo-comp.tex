@@ -1,0 +1,46 @@
+\documentclass[tikz]{standalone}
+\usepackage{gitdags/gitdags}
+\usepackage{inconsolata}
+\usetikzlibrary{calc,backgrounds,positioning}
+
+\tikzstyle{repolabel} = [yshift=-1em,text width=2.5em,text=solarized-base1,font=\tiny\ttfamily,align=center]
+\tikzstyle{repoblob} = [blob,thick,scale=1.25,draw=solarized-base01,text=solarized-orange]
+
+\begin{document}
+  \begin{tikzpicture}
+
+    % Commit history
+    \begin{scope}[
+      scale=0.6,
+      every node/.append style={transform shape},
+      local bounding box=scope1
+      ]
+      \gitDAG[grow down sep=2em]{
+      C1 -- C2
+      };
+
+      \node[DAGcommit,reset preaction,draw=none,fill=none] (C3) [below=2em of C2] {};
+
+      \begin{scope}[on background layer]
+        \fill[rounded corners,solarized-base3] ($(C1)+(-1,0.75)$) rectangle ($(C3)+(1,-0.75)$);
+      \end{scope}
+    \end{scope}
+    \coordinate [below=1em of C3] (CH);
+    \node[repolabel] at (CH) {Commit History};
+
+    % % Staging Area
+    \coordinate (SA) at ($(CH)+(-2,0)$);
+    \node[DAGcommit] (snapshot) at ($(scope1)+(-2,0)$) {};
+    \node[repolabel] at (SA) {Staging Area};
+
+    % Working directory
+    \coordinate (WT) at ($(CH)+(-4,0)$);
+    \coordinate (WTcontents) at ($(scope1)+(-4,0)$);
+    \node [repoblob,xshift=0.5em,yshift=0.5em] at (WTcontents) {};
+    \node [repoblob] at (WTcontents) {};
+    \node [repoblob,xshift=-0.5em,yshift=-0.5em] at (WTcontents) {*file};
+    \node[repolabel] at (WT) {Working Tree};
+
+
+  \end{tikzpicture}
+\end{document}
