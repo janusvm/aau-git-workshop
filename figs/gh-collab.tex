@@ -1,0 +1,22 @@
+\documentclass[tikz]{standalone}
+\usepackage{gitdags/gitdags}
+\usepackage{graphicx}
+
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+  \begin{tikzpicture}
+
+    % Remote
+    \node (gh) at (2,2.5) {\includegraphics[width=2.5em]{fa/github}};
+    \node [yshift=-2.5em] (remote) at (gh) {\includegraphics[width=2em]{fa/server}};
+
+    % Locals
+    \foreach \x in {0,1,2} {
+      \node (u\x) at (2*\x,0) {\includegraphics[width=2em]{fa/laptop}};
+      \node [yshift=-2em] at (u\x) {\includegraphics[width=2em]{fa/user}};
+      \draw [resetarrows,Stealth-Stealth,densely dotted] (u\x) -- (remote);
+    };
+
+  \end{tikzpicture}
+\end{document}

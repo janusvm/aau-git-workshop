@@ -15,6 +15,8 @@ SUBDIR = input
 RMD_INPUT := $(wildcard $(SUBDIR)/*.Rmd)
 TEX_FIGS := $(wildcard figs/*.tex)
 SVG_FIGS := $(TEX_FIGS:.tex=.svg)
+TEX_FA := $(wildcard figs/fa/*.tex)
+PDF_FA := $(TEX_FA:.tex=.pdf)
 
 # Rules -----------------------------------------------------------------------
 
@@ -25,8 +27,13 @@ $(SLIDES).html: $(SLIDES).Rmd $(RMD_INPUT) $(CSS) $(SVG_FIGS)
 	Rscript $(R_OPTS) -e "rmarkdown::render('$<', 'xaringan::moon_reader')"
 
 # SVG figures
-%.svg: %.tex
+%.svg: %.tex $(PDF_FA)
 	cd figs && \
-	latexmk -pdf -quiet $(<F) && \
+	latexmk -pdf $(<F) && \
 	pdf2svg $(patsubst %.tex,%.pdf,$(<F)) $(@F) && \
 	latexmk -C $(<F)
+
+figs/fa/%.pdf: figs/fa/%.tex
+	cd figs/fa && \
+	xelatex $(<F) && \
+	latexmk -c
