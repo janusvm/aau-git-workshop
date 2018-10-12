@@ -7,3 +7,10 @@ class: center, middle, inverse
 class: center, middle
 
 ![Source: Atlassian](https://wac-cdn.atlassian.com/dam/jcr:0c5257d5-ff01-4014-af12-faf2aec53cc3/01.svg)
+
+---
+class: center, middle
+
+```{r test-fig}
+knitr::include_graphics("figs/test.svg")
+```

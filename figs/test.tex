@@ -1,0 +1,17 @@
+\documentclass{standalone}
+\usepackage{gitdags/gitdags}
+
+\begin{document}
+\begin{tikzpicture}
+  \gitDAG{
+    A -- B -- {
+      E[xshift=9em],
+      {[nodes=unreachable] C -- D}
+    },
+    D -- E
+  };
+
+  \SAandWT;
+  \toSAfrom{E};
+\end{tikzpicture}
+\end{document}
