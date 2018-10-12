@@ -41,4 +41,26 @@ sudo apt install git
 ---
 name: github
 
-# GitHub
+# Collaborate with GitHub
+
+`r emo::ji('question')`
+web-based platform for hosting Git repos + more
+
+`r emo::ji('exclamation')`
+signing up with uni email $\implies$ free private repos
+
+--
+
+## Getting started
+
+1. Go to **https://github.com/** and sign up with your `@student.aau.dk` email
+
+2. Go to **https://education.github.com/pack** and click _Get your Pack_
+
+---
+
+## Workflow
+
+```{r gh-collab, out.width="80%"}
+knitr::include_graphics("figs/gh-collab.svg")
+```
