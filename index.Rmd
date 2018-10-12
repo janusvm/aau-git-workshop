@@ -1,6 +1,6 @@
 ---
 title: "Git Workshop"
-author: "Janus Valberg-Madsen"
+author: "<a href='https://github.com/janusvm'>Janus Valberg-Madsen</a>"
 date: "2018-10-22 @ Aalborg University"
 output:
   xaringan::moon_reader:
