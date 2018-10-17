@@ -47,7 +47,7 @@ name: github
 web-based platform for hosting Git repos + more
 
 `r emo::ji('exclamation')`
-signing up with uni email $\implies$ free private repos
+signing up with uni email ⟹ free private repos
 
 --
 
@@ -61,6 +61,6 @@ signing up with uni email $\implies$ free private repos
 
 ## Workflow
 
-```{r gh-collab, out.width="80%"}
+```{r gh-collab, out.width="75%"}
 knitr::include_graphics("figs/gh-collab.svg")
 ```
