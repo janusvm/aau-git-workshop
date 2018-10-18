@@ -6,16 +6,24 @@
 
 --
 
-2. Overview of the most essential Git commands (with demos)
+1. Overview of the most essential Git concepts
 
 --
 
-3. **(interactive)** Install Git and a client
+1. Overview of GitHub
 
 --
 
-4. **(interactive)** Set up a repository on GitHub for your P1 project
+1. Live demo showcasing the concepts
 
 --
 
-5. Exercises
+1. **(interactive)** Install Git and a client
+
+--
+
+1. **(interactive)** Set up a repository on GitHub for your P1 project
+
+--
+
+1. Exercises (if there's time left)

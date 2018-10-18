@@ -1,0 +1,29 @@
+# Why use a version control system (VCS)?
+
+--
+
+- You have a history of changes
+
+--
+
+- It makes collaboration easy
+
+--
+
+- It provides you with a full backup of your project
+
+--
+
+## Why Git, specifically?
+
+--
+
+- Distributed
+
+--
+
+- Most popular ⟹ all problems have been had
+
+--
+
+- GitHub
