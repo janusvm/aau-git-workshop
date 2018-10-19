@@ -1,0 +1,23 @@
+name: github
+
+# GitHub
+
+```{r gh-repo, out.width="75%"}
+knitr::include_graphics("imgs/gh-repo.png")
+```
+
+---
+
+## View and comment on commits
+
+```{r gh-commit-comment}
+knitr::include_graphics("imgs/gh-commit-comment.png")
+```
+
+---
+
+## Keep track of tasks with project boards
+
+```{r gh-projects}
+knitr::include_graphics("imgs/gh-projects.png")
+```

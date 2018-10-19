@@ -18,13 +18,14 @@ TEX_FIGS := $(wildcard figs/*.tex)
 SVG_FIGS := $(TEX_FIGS:.tex=.svg)
 TEX_FA := $(wildcard figs/fa/*.tex)
 PDF_FA := $(TEX_FA:.tex=.pdf)
+IMGS := $(wildcard imgs/*)
 
 # Rules -----------------------------------------------------------------------
 
 # Slides
 slides: $(SLIDES).html
 
-$(SLIDES).html: $(SLIDES).Rmd $(RMD_INPUT) $(CSS) $(SVG_FIGS)
+$(SLIDES).html: $(SLIDES).Rmd $(RMD_INPUT) $(CSS) $(SVG_FIGS) $(IMGS)
 	Rscript $(R_OPTS) -e "rmarkdown::render('$<', 'xaringan::moon_reader')"
 
 # SVG figures
