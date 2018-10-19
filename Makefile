@@ -6,6 +6,7 @@ R_OPTS = --slave --vanilla
 
 # Main files
 SLIDES = index
+NOTES = notes
 CSS = custom.css
 
 # Directories
@@ -37,3 +38,9 @@ figs/fa/%.pdf: figs/fa/%.tex
 	cd figs/fa && \
 	xelatex $(<F) && \
 	latexmk -c
+
+# Presenter notes
+notes: $(NOTES).pdf
+
+$(NOTES).pdf: $(NOTES).Rmd
+	Rscript $(R_OPTS) -e "knitr::knit('$<')"
