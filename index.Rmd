@@ -19,6 +19,7 @@ knitr::opts_chunk$set(
   out.width = "85%",
   fig.align = "center"
 )
+for (f in Sys.glob("funs/*.R")) source(f)
 ```
 
 ```{r intro, child = "input/intro.Rmd"}

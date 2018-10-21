@@ -1,6 +1,6 @@
 name: github
 
-# GitHub
+# `r octicon("mark-github", h = 44)` GitHub
 
 ```{r gh-repo, out.width="75%"}
 knitr::include_graphics("imgs/gh-repo.png")
@@ -20,4 +20,12 @@ knitr::include_graphics("imgs/gh-commit-comment.png")
 
 ```{r gh-projects}
 knitr::include_graphics("imgs/gh-projects.png")
+```
+
+---
+
+## Workflow
+
+```{r gh-collab, out.width="75%"}
+knitr::include_graphics("figs/gh-collab.svg")
 ```
