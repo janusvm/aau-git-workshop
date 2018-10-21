@@ -45,3 +45,8 @@ notes: $(NOTES).pdf
 
 $(NOTES).pdf: $(NOTES).Rmd
 	Rscript $(R_OPTS) -e "knitr::knit('$<')"
+
+clean-figs:
+	rm -f $(SVG_FIGS)
+
+.PHONY: slides notes clean-figs
