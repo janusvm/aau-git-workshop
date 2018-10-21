@@ -45,10 +45,14 @@ name: demo
 class: center, middle, inverse
 
 # Time for a demo
-⮡ on Windows with GitHub Desktop
-
+⤷ on Windows with GitHub Desktop
 
 ---
 
 ```{r install, child = "input/install.Rmd"}
+```
+
+---
+
+```{r exercises, child = "input/exercises.Rmd"}
 ```
