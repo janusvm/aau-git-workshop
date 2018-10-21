@@ -6,7 +6,7 @@ imgs/octicons/*
 
 # ... except these specific ones
 !imgs/octicons/mark-github.svg
-!imgs/octicons/chevron-left.svg
-!imgs/octicons/chevron-right.svg
+!imgs/octicons/code.svg
 !imgs/octicons/chevron-down.svg
 !imgs/octicons/repo.svg
+!imgs/octicons/gear.svg

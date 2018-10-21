@@ -88,7 +88,7 @@ _NB: Only one person from each group needs to set up a project repository_
 
 1. Add each of your group members as a collaborator
 
-1. Go to .gh-menu[`r octicon("chevron-left", "chevron-right", w = 12)`Code] and click .gh-btn[Clone or download`r octicon("chevron-down")`]
+1. Go to .gh-menu[`r octicon("code")`Code] and click .gh-btn[Clone or download`r octicon("chevron-down")`]
 
 1. Click .gh-menu[Open in Desktop] to get started (or copy the URL and open it with your Git client, if you don't use GitHub Desktop)
 
