@@ -1,0 +1,46 @@
+name: branches
+layout: true
+
+## Branches
+
+> Branches are simply pointers to commits that you can use to work on different things
+
+---
+
+---
+
+```{r git-branch-before}
+knitr::include_graphics("figs/git-branch-before.svg")
+```
+
+---
+
+```{r git-branch-after}
+knitr::include_graphics("figs/git-branch-after.svg")
+```
+
+---
+layout: true
+
+## Checkout: switch to a different branch
+
+---
+
+```{r git-checkout-before}
+knitr::include_graphics("figs/git-checkout-before.svg")
+```
+
+---
+
+```{r git-checkout-after}
+knitr::include_graphics("figs/git-checkout-after.svg")
+```
+
+---
+layout: false
+
+## Merge: apply changes from a different branch
+
+```{r git-merge}
+knitr::include_graphics("figs/git-merge.svg")
+```

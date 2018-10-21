@@ -1,0 +1,64 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage{gitdags/gitdags}
+\usepackage{inconsolata}
+\usepackage{graphicx}
+\usetikzlibrary{calc,backgrounds,positioning,shapes}
+
+\tikzstyle{repolabel} = [yshift=-1em,text width=2.5em,text=solarized-base1,font=\tiny\ttfamily,align=center]
+\tikzstyle{repoblob} = [blob,thick,scale=1.25,draw=solarized-base01,text=solarized-orange]
+\tikzstyle{cmdarrow} =[single arrow,draw=none,align=center,font=\ttfamily]
+
+\begin{document}
+\begin{tikzpicture}
+
+  % COORDINATES ----------------------------------------------------------------
+
+  \coordinate (WT) at (0,0);
+  \coordinate (SA) at (3,0);
+  \coordinate (LR) at (6,0);
+  \coordinate (RR) at (9,0);
+
+
+  \foreach \x in {WT, SA, LR, RR} {
+    \draw[densely dotted,solarized-base1!50,line width=1pt] ($(\x)+(0,2)$) -- ($(\x)+(0,-3)$);
+  }
+
+  % NODES ----------------------------------------------------------------------
+
+  % Working tree
+  \fill[white] ($(WT)+(-.8,.9)$) rectangle ($(WT)+(.8,-.9)$);
+  \node[repoblob,xshift=0.5em,yshift=0.5em] at (WT) {};
+  \node[repoblob] at (WT) {};
+  \node[repoblob,xshift=-0.5em,yshift=-0.5em] at (WT) {file};
+
+  % Staging area
+  \fill[white] ($(SA)+(-1,.5)$) rectangle ($(SA)+(1,-.5)$);
+  \node[DAGcommit,scale=1.5] at (SA) {};
+
+  % Local repository
+  \fill[white] ($(LR)+(-1,.7)$) rectangle ($(LR)+(1,-.7)$);
+  \node at (LR) {\includegraphics[width=5em]{fa/laptop}};
+
+  % Remote repository
+  \fill[white] ($(RR)+(-1,.7)$) rectangle ($(RR)+(1,-.7)$);
+  \node at (RR) {\includegraphics[width=4em]{fa/server}};
+
+
+  % ARROWS ---------------------------------------------------------------------
+
+  \begin{scope}[every node/.style={cmdarrow,anchor=west,text width=2.3cm,xshift=0.1cm}]
+    \node[yshift=1.5cm,left color=solarized-blue!65,right color=solarized-blue!50] at (WT) {add};
+    \node[yshift=1.5cm,left color=solarized-cyan!65,right color=solarized-cyan!50] at (SA) {commit};
+    \node[yshift=1.5cm,left color=solarized-green!65,right color=solarized-green!50] at (LR) {push};
+  \end{scope}
+
+  \begin{scope}[every node/.style={cmdarrow,anchor=east,xshift=-0.1cm,shape border rotate=180}]
+    \node[text width=8.3cm,yshift=-1.5cm,right color=solarized-yellow!50,left color=solarized-yellow!40] at (RR) {pull};
+    \node[text width=2.3cm,yshift=-2.5cm,right color=solarized-orange!60,left color=solarized-orange!50] at (RR) {fetch};
+    \node[text width=5.3cm,yshift=-2.5cm,right color=solarized-orange!50,left color=solarized-orange!40] at (LR) {checkout/merge};
+  \end{scope}
+
+
+
+\end{tikzpicture}
+\end{document}

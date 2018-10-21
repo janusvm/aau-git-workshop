@@ -67,3 +67,16 @@ knitr::include_graphics("figs/git-pull-before.svg")
 ```{r git-pull-after}
 knitr::include_graphics("figs/git-pull-after.svg")
 ```
+
+---
+
+```{r branches, child = "branches.Rmd"}
+```
+
+---
+
+## Overview
+
+```{r git-overview}
+knitr::include_graphics("figs/git-overview.svg")
+```

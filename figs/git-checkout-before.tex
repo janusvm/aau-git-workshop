@@ -1,0 +1,49 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage{gitdags/gitdags}
+\usetikzlibrary{calc,positioning}
+
+\tikzstyle{repoblob} = [blob,thick,scale=1.25,draw=solarized-base01,text=solarized-orange,text width=1em]
+
+\begin{document}
+\begin{tikzpicture}
+  \gitDAG [grow right sep=2em] {
+    M1 -- M2 -- {
+      M3 -- M4,
+      T1 -- T2
+    }
+  };
+
+  \gitbranch
+  [master]
+  {master}
+  {above=of M4}
+  {M4}
+
+  \gitbranch
+  [topic]
+  {topic}
+  {below=of T2}
+  {T2}
+
+  \gitHEAD
+  {right=of topic}
+  {topic}
+
+  \node[gitSA,below=4em of M1] (stagingarea) {staging area};
+  \node[gitWT,below=of stagingarea] (workingtree) {working tree};
+
+  \coordinate [right=6em of workingtree] (blobs);
+  \begin{scope}[local bounding box=blobbox]
+    \node [repoblob,shift={(0.5em,0.5em)}] (backblob) at (blobs) {};
+    \node [repoblob] (midblob) at (blobs) {};
+    \node [repoblob,shift={(-0.5em,-0.5em)}] (frontblob) at (blobs) {file v6};
+  \end{scope}
+
+  \draw [thick,solarized-violet,dotted,rounded corners]
+  ($(blobbox.south west)+(-1em,-1em)$) rectangle ($(blobbox.north east)+(1em,1em)$)
+  (workingtree.east) -- ($(blobbox.west)+(-1em,0)$);
+
+  \node[right=8em of M4] {};
+
+\end{tikzpicture}
+\end{document}
