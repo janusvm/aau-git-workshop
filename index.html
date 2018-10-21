@@ -145,9 +145,55 @@ class: center, middle, inverse
 ---
 
 
+name: branches
+layout: true
+
+## Branches
+
+&gt; Branches are simply pointers to commits that you can use to work on different things
+
+---
+
+---
+
+&lt;img src="figs/git-branch-before.svg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="figs/git-branch-after.svg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+layout: true
+
+## Checkout: switch to a different branch
+
+---
+
+&lt;img src="figs/git-checkout-before.svg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+&lt;img src="figs/git-checkout-after.svg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+layout: false
+
+## Merge: apply changes from a different branch
+
+&lt;img src="figs/git-merge.svg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Overview
+
+&lt;img src="figs/git-overview.svg" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+
 name: github
 
-# GitHub
+# &lt;img src="imgs/octicons/mark-github.svg" height="44" width="44" alt="icon"&gt; GitHub
 
 &lt;img src="imgs/gh-repo.png" width="75%" style="display: block; margin: auto;" /&gt;
 
@@ -164,17 +210,29 @@ name: github
 &lt;img src="imgs/gh-projects.png" width="85%" style="display: block; margin: auto;" /&gt;
 
 ---
+
+## Workflow
+
+&lt;img src="figs/gh-collab.svg" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
 name: demo
 class: center, middle, inverse
 
 # Time for a demo
-⮡ on Windows with GitHub Desktop
-
+⤷ on Windows with GitHub Desktop
 
 ---
 
 
-name: installation
+name: setup
+class: center, middle, inverse
+
+# Time to set up Git and GitHub
+
+⤷ and get your project repository ready to go
+
+---
 
 .pull-left[
 # Installing Git
@@ -201,17 +259,18 @@ sudo apt install git
 
 ♟ [**GitHub Desktop**](https://desktop.github.com/)
 
-⤷ very simple client, only most basic features
+⤷ very simple client, only most basic features; integrates with GitHub
 
 ♜ [**GitKraken**](https://www.gitkraken.com/)
 
-⤷ more features, fancy UI; free for _non-commercial_ use, requires account
+⤷ more features, fancy UI; free for _non-commercial_ use, requires account or GitHub sign-in
 
-♞ **Your editor of choice**
+♛ **Your editor of choice**
 
-⤷ many editors support version control from inside the editor
+⤷ many editors support version control from inside the editor&lt;br&gt;
+.small[(e.g. Emacs with Magit, or Vim with Fugitive)]
 
-♛ **The command line** 😏
+♚ **The command line** 😏
 ]
 
 ---
@@ -229,15 +288,104 @@ signing up with uni email ⟹ free private repos
 
 ## Getting started
 
-1. Go to **https://github.com/** and sign up with your `@student.aau.dk` email
+1. Go to [**github.com**](https://github.com) and sign up with your `@student.aau.dk` email
 
-2. Go to **https://education.github.com/pack** and click _Get your Pack_
+2. Go to [**education.github.com/pack**](https://education.github.com/pack) and click _Get your Pack_
+
+---
+layout: true
+
+## Setting up a repository (for the repo owner)
+
+_NB: Only one person from each group needs to set up a project repository_
 
 ---
 
-## Workflow
+1. On GitHub, log in and click .gh-btn[&lt;img src="imgs/octicons/repo.svg" height="20" width="20" alt="icon"&gt;New]
 
-&lt;img src="figs/gh-collab.svg" width="75%" style="display: block; margin: auto;" /&gt;
+1. Fill in the details;
+
+    - **Repository name:** P1
+    - **Description:** P1 project for Group `&lt;your group id&gt;`
+    - **🗹 Private** (can be set later, if you don't have the student discount yet)
+    - **🗹 Initialize this repository with a README**
+    - **Add .gitignore:** TeX
+
+1. Go to .gh-menu[&lt;img src="imgs/octicons/gear.svg" height="20" width="20" alt="icon"&gt;Settings] 🠪 .gh-menu[Collaborators]
+
+1. Add each of your group members as a collaborator
+
+1. Go to .gh-menu[&lt;img src="imgs/octicons/chevron-left.svg" height="20" width="12" alt="icon"&gt;&lt;img src="imgs/octicons/chevron-right.svg" height="20" width="12" alt="icon"&gt;Code] and click .gh-btn[Clone or download&lt;img src="imgs/octicons/chevron-down.svg" height="20" width="20" alt="icon"&gt;]
+
+1. Click .gh-menu[Open in Desktop] to get started (or copy the URL and open it with your Git client, if you don't use GitHub Desktop)
+
+---
+
+1. Download a template from [**janusvm.github.io/aau-project-template**](https://janusvm.github.io/aau-project-template/)
+
+1. Unpack it in the folder where you cloned the project
+
+1. In GitHub Desktop (or whatever client you use), stage all the new files
+
+1. Commit with a message like "Add project template files"
+
+1. Push to GitHub
+
+---
+layout: false
+
+## Setting up a repository (for the collaborators)
+
+1. Go to the repository page on GitHub (github.com/owner/repo)
+
+1. Click .gh-btn[Clone or download &lt;img src="imgs/octicons/chevron-down.svg" height="20" width="20" alt="icon"&gt;]
+
+1. Clone the repository (by clicking .gh-menu[Open in Desktop] with GH Desktop, or by using the URL with another client)
+
+After this, you're ready to start writing!
+
+
+---
+
+## Remember the workflow
+
+1. **Pull** from GitHub to get the latest changes from the other group members
+
+1. Work on the project
+
+1. **Add** and **Commit** related changes together
+
+1. **Pull** again, in case new commits have been pushed in the meantime
+
+1. If there are any conflicts, resolve them and commit the merge
+
+1. **Push** your changes to GitHub, so the other group members can get them
+
+---
+
+
+name: exercises
+
+# Exercises
+
+.center[✨ **_[learngitbranching.js.org](https://learngitbranching.js.org)_** ✨]
+
+
+## Links and help
+
+- These slides: [janusvm.github.io/aau-git-workshop](https://janusvm.github.io/aau-git-workshop)
+
+- Very simple introduction to Git: [think-like-a-git.net](http://think-like-a-git.net/)
+
+- More comprehensive tutorials: [www.atlassian.com/git/tutorials](https://www.atlassian.com/git/tutorials)
+
+- Tips on writing commit messages: [chris.beams.io/posts/git-commit](https://chris.beams.io/posts/git-commit/)
+
+- Fixing mistakes: [sethrobertson.github.io/GitFixUm/fixup.html](http://sethrobertson.github.io/GitFixUm/fixup.html)
+
+- Google .gh-menu[:^)]
+
+Feel free to ask questions too!
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
