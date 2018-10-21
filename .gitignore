@@ -1,0 +1,12 @@
+# Ignore Emacs auto
+auto/
+
+# Don't include ALL of the octicons...
+imgs/octicons/*
+
+# ... except these specific ones
+!imgs/octicons/mark-github.svg
+!imgs/octicons/chevron-left.svg
+!imgs/octicons/chevron-right.svg
+!imgs/octicons/chevron-down.svg
+!imgs/octicons/repo.svg
