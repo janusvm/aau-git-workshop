@@ -3,7 +3,9 @@ layout: true
 
 ## Branches
 
-> Branches are simply pointers to commits that you can use to work on different things
+- Branches are simply labels pointing to commits
+
+- Git uses these labels to move around in the commit history
 
 ---
 

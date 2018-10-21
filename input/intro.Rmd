@@ -6,7 +6,7 @@
 
 --
 
-1. Overview of the most essential Git concepts
+1. Overview of the most important Git functions
 
 --
 

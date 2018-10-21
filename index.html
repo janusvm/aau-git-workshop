@@ -30,7 +30,7 @@ class: center, middle, inverse, title-slide
 
 --
 
-1. Overview of the most essential Git concepts
+1. Overview of the most important Git functions
 
 --
 
@@ -59,7 +59,7 @@ class: center, middle, inverse, title-slide
 
 --
 
-- You have a history of changes
+- You have an annotated history of changes
 
 --
 
@@ -68,6 +68,10 @@ class: center, middle, inverse, title-slide
 --
 
 - It provides you with a full backup of your project
+
+--
+
+- Unlike on services like Dropbox, conflicts are structured and easily resolved
 
 --
 
@@ -91,7 +95,7 @@ class: center, middle, inverse, title-slide
 name: concepts
 class: center, middle, inverse
 
-# Git concepts
+# Git concepts (functions)
 
 ---
 
@@ -142,6 +146,15 @@ class: center, middle, inverse
 
 &lt;img src="figs/git-pull-after.svg" width="85%" style="display: block; margin: auto;" /&gt;
 
+--
+
+
+**Fetch**
+
+- "Safe" alternative to push
+- Downloads commits _without_ applying them to the working tree
+
+
 ---
 
 
@@ -150,7 +163,9 @@ layout: true
 
 ## Branches
 
-&gt; Branches are simply pointers to commits that you can use to work on different things
+- Branches are simply labels pointing to commits
+
+- Git uses these labels to move around in the commit history
 
 ---
 
@@ -201,13 +216,13 @@ name: github
 
 ## View and comment on commits
 
-&lt;img src="imgs/gh-commit-comment.png" width="85%" style="display: block; margin: auto;" /&gt;
+&lt;img src="imgs/gh-commit-comment.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 ---
 
 ## Keep track of tasks with project boards
 
-&lt;img src="imgs/gh-projects.png" width="85%" style="display: block; margin: auto;" /&gt;
+&lt;img src="imgs/gh-projects.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -277,9 +292,6 @@ sudo apt install git
 name: github
 
 # Collaborate with GitHub
-
-❓
-web-based platform for hosting Git repos + more
 
 ❗
 signing up with uni email ⟹ free private repos

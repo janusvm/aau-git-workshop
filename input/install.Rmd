@@ -51,9 +51,6 @@ name: github
 
 # Collaborate with GitHub
 
-`r emo::ji('question')`
-web-based platform for hosting Git repos + more
-
 `r emo::ji('exclamation')`
 signing up with uni email ⟹ free private repos
 

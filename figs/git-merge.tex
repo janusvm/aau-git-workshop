@@ -1,5 +1,6 @@
 \documentclass[tikz,border=3pt]{standalone}
 \usepackage{gitdags/gitdags}
+\usepackage{inconsolata}
 \usetikzlibrary{calc,positioning}
 
 \tikzstyle{repoblob} = [blob,thick,scale=1.25,draw=solarized-base01,text=solarized-orange,text width=1em]
@@ -8,26 +9,22 @@
 \begin{tikzpicture}
   \gitDAG [grow right sep=2em] {
     M1 -- M2 -- {
-      M3 -- M4 -- M7,
-      T1 -- T2 -- M7
+      M3 -- M4 -- M5,
+      T1 -- T2 -- M5
     }
   };
 
   \gitbranch
   [master]
-  {master}
-  {above=of M7}
-  {M7}
+  {master*}
+  {above=of M5}
+  {M5}
 
   \gitbranch
   [topic]
   {topic}
-  {below=of M7}
-  {M7}
-
-  \gitHEAD
-  {right=of master}
-  {master}
+  {below=of T2}
+  {T2}
 
   \node[gitSA,below=4em of M1] (stagingarea) {staging area};
   \node[gitWT,below=of stagingarea] (workingtree) {working tree};
@@ -36,7 +33,7 @@
   \begin{scope}[local bounding box=blobbox]
     \node [repoblob,shift={(0.5em,0.5em)}] (backblob) at (blobs) {};
     \node [repoblob] (midblob) at (blobs) {};
-    \node [repoblob,shift={(-0.5em,-0.5em)}] (frontblob) at (blobs) {file v6};
+    \node [repoblob,shift={(-0.5em,-0.5em)}] (frontblob) at (blobs) {files (M5)};
   \end{scope}
 
   \draw [thick,solarized-violet,dotted,rounded corners]

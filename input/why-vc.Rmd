@@ -2,7 +2,7 @@
 
 --
 
-- You have a history of changes
+- You have an annotated history of changes
 
 --
 
@@ -11,6 +11,10 @@
 --
 
 - It provides you with a full backup of your project
+
+--
+
+- Unlike on services like Dropbox, conflicts are structured and easily resolved
 
 --
 

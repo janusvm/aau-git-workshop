@@ -10,7 +10,7 @@ knitr::include_graphics("imgs/gh-repo.png")
 
 ## View and comment on commits
 
-```{r gh-commit-comment}
+```{r gh-commit-comment, out.width="100%"}
 knitr::include_graphics("imgs/gh-commit-comment.png")
 ```
 
@@ -18,7 +18,7 @@ knitr::include_graphics("imgs/gh-commit-comment.png")
 
 ## Keep track of tasks with project boards
 
-```{r gh-projects}
+```{r gh-projects, out.width="100%"}
 knitr::include_graphics("imgs/gh-projects.png")
 ```
 

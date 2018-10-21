@@ -1,7 +1,7 @@
 name: concepts
 class: center, middle, inverse
 
-# Git concepts
+# Git concepts (functions)
 
 ---
 
@@ -67,6 +67,15 @@ knitr::include_graphics("figs/git-pull-before.svg")
 ```{r git-pull-after}
 knitr::include_graphics("figs/git-pull-after.svg")
 ```
+
+--
+
+
+**Fetch**
+
+- "Safe" alternative to push
+- Downloads commits _without_ applying them to the working tree
+
 
 ---
 
